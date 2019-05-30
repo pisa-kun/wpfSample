@@ -146,3 +146,7 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+WPFSample/.vs/WPFSample/v15/Server/sqlite3/db.lock
+WPFSample/.vs/WPFSample/v15/Server/sqlite3/storage.ide
+WPFSample/.vs/WPFSample/v15/Server/sqlite3/storage.ide-shm
+WPFSample/.vs/WPFSample/v15/Server/sqlite3/storage.ide-wal
