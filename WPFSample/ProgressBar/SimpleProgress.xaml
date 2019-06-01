@@ -4,11 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProgressBar"
+        xmlns:winForms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
         mc:Ignorable="d"
         Title="SimpleProgress" Height="300" Width="300">
-    <StackPanel 
+
+    <StackPanel
         HorizontalAlignment="Center" 
         VerticalAlignment="Center">
+
+        <WindowsFormsHost x:Name="Indicator" Loaded="Indicator_Loaded"
+                          HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
+            <winForms:PictureBox></winForms:PictureBox>
+        </WindowsFormsHost>
 
         <!-- プログレスバー -->
         <ProgressBar 
@@ -18,7 +25,9 @@
             Maximum="100"
             Value="{Binding Progress}"
             />
-        <Button Content="実行" Width="75" Margin="10" Click="Button_Click"/>
-
+        <Button Content="実行" Width="75" Margin="10" Command="{Binding MyCommand}" IsEnabled="{Binding IsButtonEnabled}"/>
+        
     </StackPanel>
+    
+    
 </Window>
